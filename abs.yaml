@@ -3,3 +3,8 @@ upload_channels:
 
 channels:
   - https://staging.continuum.io/prefect/fs/google-cloud-aiplatform-feedstock/pr3/9b9f25f
+  - https://staging.continuum.io/prefect/fs/grpc-google-iam-v1-feedstock/pr4/a537978
+  - https://staging.continuum.io/prefect/fs/google-cloud-bigquery-feedstock/pr2/795699c
+  - https://staging.continuum.io/prefect/fs/google-cloud-bigquery-storage-feedstock/pr2/1676cf1
+  - https://staging.continuum.io/prefect/fs/db-dtypes-feedstock/pr3/e95d9b6
+  - https://staging.continuum.io/prefect/fs/google-cloud-resource-manager-feedstock/pr3/7def4c8
