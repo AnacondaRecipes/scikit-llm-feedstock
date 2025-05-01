@@ -56,9 +56,29 @@ test:
     - pytest
 
 about:
+  home: https://beastbyte.ai/scikit-llm.html
   summary: 'Scikit-LLM: Seamlessly integrate powerful language models like ChatGPT into scikit-learn for enhanced text analysis tasks.'
   license: MIT
+  license_family: MIT
   license_file: LICENSE
+  description: |
+    Scikit-LLM is a Python library designed to streamline the development of complex
+    and production-ready NLP pipelines. It achieves this by offering a conventional
+    scikit-learn API, thus abstracting the complexity of working with different large
+    language models (LLMs).
+
+    Scikit-LLM can interact with a variety of LLM providers, whether they are running
+    locally (such as GPT4All) or in the cloud (including Azure, OpenAI, and Vertex AI).
+
+    The library supports a wide range of text analysis tasks, including text classification
+    and text-to-text modeling. For complex scenarios, multiple tasks can be chained
+    together to form a scikit-learn pipeline.
+
+    Additionally, Scikit-LLM supports various prompting strategies (such as zero-shot,
+    few-shot, and dynamic few-shot) and tuning options, which can significantly
+    enhance model performance on a specific task.
+  doc_url: https://skllm.beastbyte.ai/
+  dev_url: https://github.com/BeastByteAI/scikit-llm
 
 extra:
   recipe-maintainers:
