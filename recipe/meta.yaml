@@ -1,0 +1,65 @@
+{% set name = "scikit-llm" %}
+{% set version = "1.4.1" %}
+
+package:
+  name: {{ name|lower }}
+  version: {{ version }}
+
+source:
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/scikit_llm-{{ version }}.tar.gz
+  sha256: 4134e8bc2e7e12ec8000fe832af3b168734dadd66f65b5b72599aa91a063f243
+
+build:
+  number: 0
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+  skip: True  # [py<39]
+
+requirements:
+  host:
+    - python
+    - wheel
+    - setuptools >=61.0
+    - pip
+  run:
+    - python
+    - scikit-learn >=1.1.0,<2.0.0
+    - pandas >=1.5.0,<3.0.0
+    - openai >=1.2.0,<2.0.0
+    - tqdm >=4.60.0,<5.0.0
+    - google-cloud-aiplatform >=1.27.0,<2.0.0
+  run_constrained:
+    - llama-cpp-python >=0.2.82,<0.2.83
+    - annoy>=1.17.2,<2.0.0
+
+test:
+  source_files:
+    - tests
+  imports:
+    - skllm
+    - skllm.datasets
+    - skllm.llm
+    - skllm.llm.gpt
+    - skllm.llm.vertex
+    - skllm.memory
+    - skllm.models
+    - skllm.models._base
+    - skllm.models.gpt
+    - skllm.models.vertex
+    - skllm.prompts
+    - skllm.utils
+  commands:
+    - pip check
+    - python -c "from importlib.metadata import version; assert(version('{{ name }}')=='{{ version }}')"
+    - pytest -v tests
+  requires:
+    - pip
+    - pytest
+
+about:
+  summary: 'Scikit-LLM: Seamlessly integrate powerful language models like ChatGPT into scikit-learn for enhanced text analysis tasks.'
+  license: MIT
+  license_file: LICENSE
+
+extra:
+  recipe-maintainers:
+    - snegireff

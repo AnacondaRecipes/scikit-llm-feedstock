@@ -1,0 +1,5 @@
+upload_channels:
+  - sfe1ed40
+
+channels:
+  - https://staging.continuum.io/prefect/fs/google-cloud-aiplatform-feedstock/pr3/9b9f25f
