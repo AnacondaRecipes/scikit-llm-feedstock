@@ -2,7 +2,7 @@ upload_channels:
   - sfe1ed40
 
 channels:
-  - https://staging.continuum.io/prefect/fs/google-cloud-aiplatform-feedstock/pr3/9b9f25f
+  - https://staging.continuum.io/prefect/fs/google-cloud-aiplatform-feedstock/pr3/f86c118
   - https://staging.continuum.io/prefect/fs/grpc-google-iam-v1-feedstock/pr4/a537978
   - https://staging.continuum.io/prefect/fs/google-cloud-bigquery-feedstock/pr2/795699c
   - https://staging.continuum.io/prefect/fs/google-cloud-bigquery-storage-feedstock/pr2/1676cf1
